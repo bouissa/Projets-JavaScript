@@ -1,4 +1,4 @@
-# 💰 Gestion Budgétaire
+#  Gestion Budgétaire
 
 Une application web simple de **gestion de budget personnel**, permettant à un utilisateur de :
 - S'inscrire / se connecter,
@@ -11,31 +11,7 @@ Une application web simple de **gestion de budget personnel**, permettant à un 
 
 # 📁 Structure du projet
 
-gestion-budgetaire/
-│
-├── client/
-│   ├── assets/             # Images (icônes, photos de profil, etc.)
-│   │   ├── icon.png
-│   │   └── profil.png
-│   ├── css/                # Feuilles de styles
-│   │   ├── style.css
-│   │   ├── stylelog.css
-│   │   └── styleprofile.css
-│   └── page/               # Pages HTML utilisateur
-│       ├── dashboard.html
-│       └── profile.html
-│
-├── js/                     # Scripts JavaScript
-│   ├── app.js              # Gestion des transactions
-│   ├── login.js            # Connexion utilisateur
-│   ├── profile.js          # Profil utilisateur + graphique
-│   └── signup.js           # Inscription
-│
-├── public/                 # Pages publiques
-│   ├── login.html
-│   └── signup.html
-│
-└── README.md               # Ce fichier
+<pre> ## 📁 Structure du projet ``` gestion-budgetaire/ ├── client/ │ ├── assets/ # Images (icônes, photos de profil, etc.) │ │ ├── icon.png │ │ └── profil.png │ ├── css/ # Feuilles de styles CSS │ │ ├── style.css │ │ ├── stylelog.css │ │ └── styleprofile.css │ └── page/ # Pages HTML utilisateur │ ├── dashboard.html │ └── profile.html ├── js/ # Scripts JavaScript │ ├── app.js # Gestion des transactions │ ├── login.js # Connexion utilisateur │ ├── profile.js # Profil utilisateur + graphique │ └── signup.js # Inscription ├── public/ # Pages publiques │ ├── login.html │ └── signup.html └── README.md # Ce fichier ``` </pre>
 
 ---
 
@@ -88,4 +64,4 @@ Développeur full-stack
 
 ## 📄 Licence
 
-Projet personnel réalisé dans un cadre pédagogique . 
+Projet réalisé dans un cadre pédagogique . 
