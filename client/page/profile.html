@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon Profil</title>
+    <link rel="stylesheet" href="../css/styleprofile.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <script>
+      const user = JSON.parse(localStorage.getItem("sessionUser"));
+      if (!user) {
+        alert("Veuillez vous connecter.");
+        window.location.href = "../public/login.html";
+      }
+    </script>
+
+    <div class="profile-container">
+      <div class="profile-header">
+        <img src="../assets/gon.png" alt="Photo de profil" />
+        <h1>Mon Profil</h1>
+      </div>
+
+      <div class="profile-info">
+        <div class="info-box">
+          <h3>Informations personnelles</h3>
+          <label>Nom</label>
+          <input type="text" value="Yassine Bouissa" />
+          <label>Email</label>
+          <input type="email" value="yassine@mail.com" />
+          <label>Bio</label>
+          <textarea rows="3">Développeur full-stack passionné.</textarea>
+          <button>Modifier le profil</button>
+        </div>
+
+        <div class="info-box">
+          <h3>Mot de passe</h3>
+          <form id="password-form">
+            <label>Mot de passe actuel</label>
+            <input type="password" id="old-password" required />
+            <label>Nouveau mot de passe</label>
+            <input type="password" id="new-password" required />
+            <button type="submit">Changer le mot de passe</button>
+            <p id="password-message"></p>
+          </form>
+        </div>
+
+        <div class="info-box">
+          <h3>Solde total</h3>
+          <div style="height: 200px">
+            <canvas id="soldeChart"></canvas>
+          </div>
+        </div>
+
+        <div class="info-box danger-zone">
+          <h3>Supprimer le compte</h3>
+          <p>Cette action est irréversible.</p>
+          <button onclick="deleteAccount()">Supprimer mon compte</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/profile.js"></script>
+  </body>
+</html>

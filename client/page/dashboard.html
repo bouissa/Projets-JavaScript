@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionnaire de Budget Personnel</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../assets/icon.png">
+</head>
+<body>
+  <script>
+    const user = JSON.parse(localStorage.getItem("sessionUser"));
+    if (!user) {
+      alert("Veuillez vous connecter.");
+      window.location.href = "../public/login.html";
+    }
+    </script>
+  <div class="container">
+    <header>
+      <h1>Mon Budget</h1>
+      <div class="solde">
+        Solde actuel : <span id="solde">0 €</span>
+      </div>
+      <div class="user-actions">
+        <button id="btn-profil">👤 Profil</button>
+        <button id="btn-deconnexion">🚪 Déconnexion</button>
+      </div>      
+    </header>
+    <section class="form-section">
+      <h2>Ajouter une transaction</h2>
+      <form id="transaction-form">
+        <input type="number" id="montant" placeholder="Montant (€)" step="0.01" required aria-label="Montant de la transaction">
+        <select id="categorie" required aria-label="Catégorie de la transaction">
+          <option value="">Catégorie</option>
+          <option value="revenu">Revenu</option>
+          <option value="alimentaire">Dépense - Alimentaire</option>
+          <option value="logement">Dépense - Logement</option>
+          <option value="transport">Dépense - Transport</option>
+          <option value="loisirs">Dépense - Loisirs</option>
+          <option value="autre">Dépense - Autre</option>
+        </select>
+        <input type="date" id="date" required>
+        <input type="hidden" id="edit-id">
+        <button type="submit">Ajouter</button>
+        <button type="button" id="reset-btn" class="hidden">Annuler</button>
+        <div class="form-error" id="form-error"></div>
+      </form>
+    </section>
+    <section class="transactions-section">
+      <h2>Transactions du mois</h2>
+      <ul id="transactions-list"></ul>
+    </section>
+    <section class="resume-section">
+      <h2>Résumé</h2>
+      <canvas id="chart" height="120"></canvas>
+      <div class="recap">
+        <span>Total revenus : <span id="total-revenus">0 €</span></span>
+        <span>Total dépenses : <span id="total-depenses">0 €</span></span>
+      </div>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../../js/app.js"></script>
+  <script>
+  // Rediriger vers le profil
+  document.getElementById("btn-profil").addEventListener("click", function () {
+    window.location.href = "../page/profile.html";
+  });
+
+  // Déconnexion
+  document.getElementById("btn-deconnexion").addEventListener("click", function () {
+    localStorage.removeItem("sessionUser");
+    window.location.href = "../../public/login.html";
+  });
+</script>
+
+</body>
+</html> 

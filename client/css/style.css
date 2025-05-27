@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+}
+.container {
+  max-width: 1000px;
+  margin: 2em auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2em 1.5em 2em 1.5em;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+}
+header h1 {
+  margin: 0 0 0.5em 0;
+  color: #2575fc;
+}
+.solde {
+  font-size: 1.3em;
+  color: #333;
+  background: #eaf6ff;
+  padding: 0.5em 1.2em;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+.form-section, .transactions-section, .resume-section {
+  margin-bottom: 2em;
+}
+.user-actions {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.user-actions button {
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.user-actions button:hover {
+  background-color: #6a11cb;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+form input, form select {
+  padding: 0.7em;
+  border-radius: 8px;
+  border: 1px solid #b3c6e0;
+  font-size: 1em;
+  min-width: 120px;
+}
+form button {
+  background: #2575fc;
+  color: #fff;
+  border: none;
+  padding: 0.7em 1.5em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+form button:hover {
+  background: #6a11cb;
+}
+.form-error {
+  color: #e74c3c;
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5em;
+}
+#transactions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#transactions-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7faff;
+  border-radius: 8px;
+  margin-bottom: 0.7em;
+  padding: 0.7em 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+}
+.transaction-montant.revenu {
+  color: #27ae60;
+  font-weight: bold;
+}
+.transaction-montant.depense {
+  color: #e74c3c;
+  font-weight: bold;
+}
+.transaction-actions button {
+  background: #fff;
+  color: #2575fc;
+  border: 1px solid #2575fc;
+  border-radius: 6px;
+  margin-left: 0.5em;
+  padding: 0.3em 0.8em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.transaction-actions button:hover {
+  background: #2575fc;
+  color: #fff;
+}
+.resume-section {
+  text-align: center;
+}
+.resume-section canvas {
+  margin: 1em auto;
+  display: block;
+  max-width: 100%;
+  background: #f7faff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.recap {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1em;
+  font-size: 1.1em;
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 1em 0.2em;
+  }
+  .recap {
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+  }
+  form {
+    flex-direction: column;
+    gap: 0.7em;
+  }
+} 
