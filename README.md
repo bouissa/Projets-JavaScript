@@ -11,31 +11,31 @@ Une application web simple de **gestion de budget personnel**, permettant à un 
 
 # 📁 Structure du projet
 
-gestion-budgetaire
+gestion-budgetaire/
 │
 ├── client/
-│ ├── assets/ # Images du projet (icônes, photos de profil, etc.)
-│ │ ├── icon.png
-│ │ └── profil.png
-│ ├── css/ # Feuilles de styles CSS
-│ │ ├── style.css
-│ │ ├── stylelog.css
-│ │ └── styleprofile.css
-│ └── page/ # Pages HTML côté utilisateur
-│ ├── dashboard.html
-│ └── profile.html
+│   ├── assets/             # Images (icônes, photos de profil, etc.)
+│   │   ├── icon.png
+│   │   └── profil.png
+│   ├── css/                # Feuilles de styles
+│   │   ├── style.css
+│   │   ├── stylelog.css
+│   │   └── styleprofile.css
+│   └── page/               # Pages HTML utilisateur
+│       ├── dashboard.html
+│       └── profile.html
 │
-├── js/ # Scripts JavaScript
-│ ├── app.js # Gestion du tableau de bord, transactions
-│ ├── login.js # Connexion utilisateur
-│ ├── profile.js # Gestion du profil, mot de passe, graphique
-│ └── signup.js # Inscription utilisateur
+├── js/                     # Scripts JavaScript
+│   ├── app.js              # Gestion des transactions
+│   ├── login.js            # Connexion utilisateur
+│   ├── profile.js          # Profil utilisateur + graphique
+│   └── signup.js           # Inscription
 │
-├── public/ # Pages publiques
-│ ├── login.html
-│ └── signup.html
+├── public/                 # Pages publiques
+│   ├── login.html
+│   └── signup.html
 │
-└── README.md # Ce fichier
+└── README.md               # Ce fichier
 
 ---
 
